@@ -44,14 +44,19 @@ class searching_for_quote:
 		qsoup=self.reachpage()
 		tag =qsoup.p
 		tag.a.decompose()
-
+		cnt=0
 		q_results=[]
 		for tag in qsoup.find_all(re.compile('p')):
 			if tag.name == 'p':
 				ch_match=tag.find_all(text=re.compile(":(.*)"))	
+			
 				for allqt in ch_match:
 					if searchFor in allqt:
+						cnt+=1
 						q_results.append(allqt)
+		if cnt==0:
+			q_results.append(':( No such term found.')
+			
 		return q_results
 
 
