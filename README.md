@@ -24,8 +24,7 @@ Get you favorite movie quotes through command line
  ```
 
  **Example**
-![Alt text](1.png?raw=true "Search")
-![Alt text](2.png?raw=true "Result")
+
 
  ```sh 
     python quotesearch.py Avatar What
